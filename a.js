@@ -1,3 +1,4 @@
+// Add left to right
 let leftList = document.querySelectorAll(".leftList li");
 leftList.forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -5,6 +6,7 @@ leftList.forEach((item) => {
   });
 });
 
+// add right to left
 let rightList = document.querySelector("#mylist");
 let observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
@@ -19,5 +21,3 @@ let observer = new MutationObserver((mutations) => {
   });
 });
 observer.observe(rightList, { childList: true });
-
-function mute() {}
