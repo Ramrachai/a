@@ -1,0 +1,22 @@
+li {
+  cursor: pointer;
+}
+li:hover {
+  background-color: rgb(231, 231, 231);
+}
+img {
+  height: auto;
+  width: 100px;
+}
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1;
+  padding: 10px 0;
+  box-shadow: inset 2px 2px 6px #00000030;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
