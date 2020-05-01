@@ -1,20 +1,27 @@
-// Add left to right
-let leftList = document.querySelectorAll(".leftList li");
+// init document list change
+let leftList = document.querySelectorAll("#leftList li");
 leftList.forEach((item) => {
   item.addEventListener("click", (e) => {
-    document.querySelector("#mylist").appendChild(item);
+    document.querySelector("#rightList").appendChild(item);
   });
 });
 
-// add right to left
-let rightList = document.querySelector("#mylist");
+// add items
+let rightList = document.querySelector("#rightList");
 let observer = new MutationObserver((mutations) => {
   mutations.forEach((mutation) => {
     if (mutation.addedNodes.length) {
-      rightItems = document.querySelectorAll("#mylist li");
+      rightItems = document.querySelectorAll("#rightList li");
       rightItems.forEach((item) => {
         item.addEventListener("click", () => {
-          document.querySelector(".leftList").appendChild(item);
+          document.querySelector("#leftList").appendChild(item);
+        });
+      });
+
+      leftItem = document.querySelectorAll("#leftList li");
+      leftItem.forEach((item) => {
+        item.addEventListener("click", () => {
+          document.querySelector("#rightList").appendChild(item);
         });
       });
     }
